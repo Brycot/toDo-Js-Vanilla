@@ -1,0 +1,74 @@
+:root {
+    --azul-bonitoxd: #233dc7;
+    --background-color: #0c0f17;
+    --second-color: #151b28;
+    --green-color: #128c40;
+    --grey-color: #4a5269;
+    --white-color: #fff;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+}
+.title-main__container {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-main__container h1 {
+    font-size: 2rem;
+    color: var(--white-color);
+}
+.tasks-main{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+}
+.tasks-main__container {
+    width: 90%;
+    height: auto;
+}
+.task {
+    display: grid;
+    grid-template-columns: 10px 1fr 10px;
+    align-items: center;
+    gap: 10px;
+    max-width: 350px;
+    padding: 4px;
+    height: 40px;
+    -webkit-box-shadow: 0px 6px 7px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 7px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 7px -1px rgba(0,0,0,0.75);
+    background-color: var(--second-color);
+    border-radius: 5px;
+}
+.task .task-title {
+    color: var(--white-color);
+    font-size: 1.4rem;
+}
+.task .delete-task {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.task .delete-task::before{
+    width: 10px;
+    height: 10px;
+    content: url('../../assets/trash.png');
+    position: relative;
+    left: -6px;
+}
