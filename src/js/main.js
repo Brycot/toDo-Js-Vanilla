@@ -2,19 +2,32 @@ import { listTask } from "./listask.mjs";
 import { task } from "./task.mjs";
 
 //importar botones y entorno de HTML a Js
-const taskContainer = document.querySelector('.tasks-main');
-const deleteButton = document.querySelector('delete-task');
-const checkButton = document.querySelector('.check');
-const menuAdd = document.querySelector('.add-menu__container');
+const taskContainer = null || document.querySelector('.tasks-main');
+const deleteButton = null || document.querySelector('.delete-task');
+const checkButton = null || document.querySelector('.check');
+const textTask = null || document.getElementById('text');
 const sendButton = null || document.querySelector('.send-button');
 
 const listMain = new listTask({});
-const taskOne = new task({
-    text: "No tengo idea",
-})
-listMain.creartarea(taskOne);
-console.log(listMain);
-const sendTask = () => {
-    console.log('probando');
+
+
+const addTask = () => {
+    const text = textTask.value;
+    const cTask = new task({text: `${text}`});
+    listMain.creartarea(cTask);
+    let view =  `
+        <section class="tasks-main__container">
+            <div class="task">
+                <label class="container-chekbox__task">
+                    <input class="check" checked="checked" type="checkbox">
+                    <div class="checkmark"></div>
+                </label>
+                <p class="task-title">${cTask.text}</p>
+                <a class="delete-task" id='delete-task' ></a>
+            </div>
+        </section>
+    `
+    taskContainer.innerHTML += view;
 }
-sendButton.addEventListener('click', sendTask);
+
+sendButton.addEventListener('click', addTask);
