@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A personal project consisting of a to-do list but only with HTML, CSS y JavaScript vanilla",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

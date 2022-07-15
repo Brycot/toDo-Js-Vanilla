@@ -116,7 +116,6 @@ body {
     border-width: 0 0.15em 0.15em 0;
     transform: rotate(45deg);
 }
-
 .task .task-title {
     color: var(--white-color);
     font-size: 1.4rem;
@@ -132,32 +131,56 @@ body {
     background-position:center;
     background-repeat: no-repeat;
 }
+.delete-task {
+    background: none;
+    border: none;
+}
 
-.add-button  {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    height: 80px;
+/* Add Menu */
+.add-menu__container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    width: 100%;
+    min-height: 80px;
 }
-.add-button button {
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
+.add-menu {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    border-radius: 10px;
     padding: 10px;
-    font-size: 6rem;
-    color: var(--background-color);
-    background-image: url('../../assets/plus.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60%;
-    background-color: var(--green-color);
+    gap: 10px;
+}
+.add-menu label {
+    align-self: flex-start;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--white-color);
+}
+.add-menu .input-menu {
+    align-self: center;
+    width: 300px;
+    min-height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--background-color);
+    color: var(--white-color);
+    padding: 10px;
+    border: 2px solid var(--azul-bonitoxd);
+}
+.add-menu .send-button {
+    align-self: center;
+    width: 300px;
+    min-height: 30px;
+    background-color: var(--azul-bonitoxd);
+    color: var(--white-color);
+    border: 2px solid var(--azul-bonitoxd);
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
     text-decoration: none;
-    border: 1px solid var(--green-color);
-    border-radius: 50%;
-    -webkit-box-shadow: 0px 0px 7px -1px rgba(18, 140, 65, 0.769);
-    -moz-box-shadow: 0px 0px 7px -1px rgba(18, 140, 65, 0.769);
-    box-shadow: 0px 0px 7px -1px rgba(18, 140, 65, 0.769);
+    text-align: center;
+    padding-top: 5px;
+    font-size: 1.4rem;
 }

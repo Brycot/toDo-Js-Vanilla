@@ -9,11 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/listask.mjs"></script>
+    <script type="module" src="./js/task.mjs"></script>
 </head>
 <body>
     <main>
         <section class="title-main__container">
-            <h1>All Tasks</h1>
+            <h1>To do</h1>
+        </section>
+
+        <section class="add-menu__container">
+            <div class="add-menu">
+                <label for="input-text">Enter your task</label>
+                <input type="text" class="input-menu">
+                <a class="send-button">Add Task</a>
+            </div>
         </section>
 
         <section class="tasks-main">
@@ -21,18 +32,16 @@
             <section class="tasks-main__container">
                 <div class="task">
                     <label class="container-chekbox__task">
-                        <input checked="checked" type="checkbox">
+                        <input class="check" checked="checked" type="checkbox">
                         <div class="checkmark"></div>
                     </label>
                     <p class="task-title">Lorem ipsum dolor</p>
-                    <a class="delete-task"></a>
+                    <button class="delete-task"></button>
                 </div>
             </section>
+            <!-- menu -->
         </section>
 
-        <section class="add-button">
-            <button href="#"></button>
-        </section>
     </main>
 </body>
 </html>
