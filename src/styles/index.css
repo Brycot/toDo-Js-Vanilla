@@ -146,7 +146,11 @@ body {
     background: none;
     border: none;
 }
-
+.NoTask {
+    color: var(--grey-color);
+    font-size: 1.4rem;
+    font-weight: 300;
+}
 /* Add Menu */
 .add-menu__container {
     display: flex;

@@ -18,6 +18,9 @@ export class listTask {
     }
     addTask(ctask) {
         const taskList = document.querySelector('.tasks-main');
+        if(document.querySelector(".NoTask")) {
+            taskList.innerHTML = '';
+        }
         // container
         const container = document.createElement('div');
         container.classList.add("task");
