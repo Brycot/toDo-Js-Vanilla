@@ -1,4 +1,4 @@
-export class task {
+export class Task {
     constructor({
         state = false,
         text = '',
